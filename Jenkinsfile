@@ -4,11 +4,11 @@ pipeline{
         PATH = "/opt/maven/bin/:$PATH"
     }
     stages{
-        stage('clone code'){
-            steps{
-                git branch: 'main', credentialsId: 'e08d4ed4-3328-4708-ab0b-14275d1e9355', url: 'https://github.com/Deekshitha-R07/WebApp.git'
-            }
-        }
+//         stage('clone code'){
+//             steps{
+//                 git branch: 'main', credentialsId: 'e08d4ed4-3328-4708-ab0b-14275d1e9355', url: 'https://github.com/Deekshitha-R07/WebApp.git'
+//             }
+//         }
         stage('build'){
             steps{
                sh 'mvn clean install'
